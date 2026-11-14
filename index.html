@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>VORTX — Juega y crea en tu navegador</title>
+<meta name="description" content="VORTX: plataforma de videojuegos UGC en el navegador. Avatar R6 propio, experiencias jugables, marketplace y comunidad.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Pantalla de arranque del sitio: fondo oscuro, wordmark VORTX en el
+     centro y portadas de las experiencias flotando inclinadas alrededor.
+     La barra avanza con hitos reales de carga que marca js/app.js
+     (__bootSet/__bootDone); si algo falla, un temporizador de seguridad
+     la retira a los 7 s para no bloquear nunca el sitio. -->
+<div id="bootScreen">
+  <div class="boot-tiles" id="bootTiles"></div>
+  <div class="boot-center">
+    <div class="boot-logo">
+      <span class="brand-bolt boot-bolt" aria-hidden="true"></span>
+      <span>VORTX</span>
+    </div>
+    <div class="boot-bar"><div id="bootFill"></div></div>
+    <div class="boot-meta"><span data-i18n="boot.text">Cargando VORTX…</span><span id="bootPct">0%</span></div>
+  </div>
+</div>
+<header id="topbar">
+  <div class="tb-main">
+    <a class="logo" href="#/">
+      <span class="brand-bolt logo-bolt" aria-hidden="true"></span>
+      <span>VORTX</span>
+    </a>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+      <input id="globalSearch" type="text" placeholder="Buscar experiencias…" autocomplete="off" data-i18n-ph="nav.searchPh">
+    </div>
+    <div class="top-right">
+      <button id="themeBtn" class="icon-btn" type="button" data-i18n-title="theme.toggle" title="Tema" aria-label="Tema"><svg class="theme-ico-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="theme-ico-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <a id="topGear" class="icon-btn" href="#/ajustes/cuenta" aria-label="Ajustes"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.51 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.23.6.86 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1z"/></svg></a>
+      <span id="coinPill" class="coin-pill hidden" title="V-Coins" role="button" tabindex="0"></span>
+      <div id="userArea"></div>
+    </div>
+  </div>
+</header>
+
+<aside id="sidebar">
+  <a class="side-logo" href="#/"><span class="brand-bolt side-bolt" aria-hidden="true"></span><span>VORTX</span></a>
+  <nav class="side-nav">
+<button class="side-item" id="sideSearchBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><span data-i18n="side.search">Buscar</span></button>
+<a class="side-item" href="#/" data-side="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span data-i18n="side.home">Inicio</span></a>
+<a class="side-item" href="#/" data-side="games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"/><line x1="7" y1="10.5" x2="7" y2="14.5"/><line x1="5" y1="12.5" x2="9" y2="12.5"/><circle cx="16" cy="11" r="0.6" fill="currentColor"/><circle cx="18.5" cy="13.5" r="0.6" fill="currentColor"/></svg><span data-i18n="side.games">Juegos</span></a>
+<a class="side-item" href="#/friends" data-side="friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="nav.friends">Friends</span> <span id="reqBadgeSide" class="nav-badge hidden">0</span></a>
+<a class="side-item" href="#/mensajes" data-side="mensajes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="side.messages">Mensajes</span> <span id="msgBadgeSide" class="nav-badge hidden">0</span></a>
+<a class="side-item" href="#/groups" data-side="groups"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/><circle cx="17.5" cy="9" r="2.6"/><path d="M16 15.2c2.9.3 5 1.9 5.6 4.8"/></svg><span data-i18n="nav.groups">Groups</span></a>
+<a class="side-item" href="#/profile" data-side="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c.9-4 4.2-6 8-6s7.1 2 8 6"/></svg><span data-i18n="side.profile">Perfil</span></a>
+<a class="side-item" href="#/avatar" data-side="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 10l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1.5z"/></svg><span data-i18n="nav.avatar">Avatar</span></a>
+<a class="side-item" href="#/inventario" data-side="inventario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg><span data-i18n="side.inventory">Inventario</span></a>
+<a class="side-item" href="#/marketplace" data-side="market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7l1.5-4h13L20 7"/><path d="M3 7h18v3H3z"/><path d="M5 10v11h14V10"/><path d="M9 21v-6h6v6"/></svg><span data-i18n="nav.marketplace">Marketplace</span></a>
+<a class="side-item" href="#/tienda" data-side="tienda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1.5 13.5a1 1 0 0 1-1 1.1H5.5a1 1 0 0 1-1-1.1z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span data-i18n="side.store">Tienda</span></a>
+<a class="side-item" href="#/trades" data-side="trades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg><span data-i18n="tr.title">Intercambios</span></a>
+<a class="side-item" href="#/hub" data-side="hub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span data-i18n="nav.hub">Creator Hub</span></a>
+<a class="side-item" href="#/ajustes/seguridad" data-side="seguridad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span data-i18n="side.security">Seguridad</span></a>
+<a class="side-item" href="#/descargar" data-side="descargar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M6.5 10.5L12 16l5.5-5.5"/><path d="M4 20h16"/></svg><span data-i18n="side.download">Descargar</span></a>
+  </nav>
+  <div class="side-foot">
+    <span id="sideCoin" class="coin-pill hidden" title="V-Coins"></span>
+    <div id="sideUser"></div>
+  </div>
+</aside>
+
+<main id="app">
+  <section id="view-home" class="view"></section>
+  <section id="view-exp" class="view hidden"></section>
+  <section id="view-market" class="view hidden"></section>
+  <section id="view-avatar" class="view hidden"></section>
+  <section id="view-friends" class="view hidden"></section>
+  <section id="view-groups" class="view hidden"></section>
+  <section id="view-profile" class="view hidden"></section>
+  <section id="view-hub" class="view hidden"></section>
+  <section id="view-search" class="view hidden"></section>
+  <section id="view-codes" class="view hidden"></section>
+  <section id="view-trades" class="view hidden"></section>
+  <section id="view-mensajes" class="view hidden"></section>
+  <section id="view-grupo" class="view hidden"></section>
+  <section id="view-inventario" class="view hidden"></section>
+  <section id="view-tienda" class="view hidden"></section>
+  <section id="view-ajustes" class="view hidden"></section>
+  <section id="view-descargar" class="view hidden"></section>
+  <section id="view-legal" class="view hidden"></section>
+  <section id="view-transacciones" class="view hidden"></section>
+  <section id="view-login" class="view hidden"></section>
+  <section id="view-registro" class="view hidden"></section>
+</main>
+
+<footer id="footer">
+  <div class="foot-row">
+    <nav class="foot-links">
+      <a href="#/legal/terminos" data-i18n="foot.terms">Términos de servicio</a>
+      <a href="#/legal/privacidad" data-i18n="foot.privacy">Privacidad</a>
+      <a href="#/legal/reglas" data-i18n="foot.rules">Reglas de la comunidad</a>
+      <a href="#/legal/creadores" data-i18n="foot.creators">Guía de creadores</a>
+    </nav>
+    <a class="foot-discord" href="https://discord.gg/8nYDeZSmnT" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.93-1.51 13.8 13.8 0 0 0-.64 1.28 18.3 18.3 0 0 0-5.5 0 13.8 13.8 0 0 0-.64-1.28h-.05A19.7 19.7 0 0 0 3.64 4.37 20.2 20.2 0 0 0 .11 18.06a19.9 19.9 0 0 0 6.03 3.03c.49-.66.93-1.37 1.3-2.1a12.9 12.9 0 0 1-2.05-1c.11-.08.22-.17.32-.25a14.2 14.2 0 0 0 12.58 0c.1.08.21.17.32.25-.65.39-1.34.73-2.05 1 .37.73.81 1.44 1.3 2.1a19.8 19.8 0 0 0 6.03-3.03 20.1 20.1 0 0 0-3.57-13.69zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.34-.95 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.34-.95 2.42-2.16 2.42z"/></svg></a>
+  </div>
+  <div class="foot-row foot-row2">
+    <span class="foot-brand"><span class="brand-bolt foot-bolt" aria-hidden="true"></span><span data-i18n="foot.rights">© 2026 VORTX</span></span>
+  </div>
+  <span data-i18n="foot.note">VORTX — plataforma independiente. Todo el contenido, personajes y accesorios son originales de VORTX.</span>
+  <span id="phaseNote" data-i18n="foot.phase">Web, avatar R6, experiencias jugables y multijugador en línea por salas. Las cuentas de esta fase viven en este navegador.</span>
+</footer>
+
+<!-- Juego a pantalla completa -->
+<div id="playOverlay" class="hidden">
+  <canvas id="gameCanvas"></canvas>
+  <div id="uwTint" class="hidden"></div>
+  <div id="playLoading"><div class="pl-bg" id="plBg"></div><div class="pl-card"><div class="pl-cover" id="plCover"></div><div class="pl-name" id="plName"></div><div class="pl-by" id="plBy"></div><div class="load-bar"><div id="loadFill"></div></div><div id="loadText" data-i18n="load.text">Cargando experiencia…</div></div></div>
+  <div id="hud" class="hidden">
+    <div id="hudTop">
+      <div class="hud-cluster">
+        <button id="hudMenuBtn" class="hud-ico" type="button" title="VORTX"><span class="brand-bolt hud-bolt"></span><span class="sr-only" data-i18n="hud.menu">Menú</span></button>
+        <button id="chatBtn" class="hud-ico" type="button" title="Chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span id="chatBadge" class="chat-badge hidden">0</span><span class="sr-only" data-i18n="hud.chat">Chat</span></button>
+        <button id="hudPeopleBtn" class="hud-ico" type="button" title="Personas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="sr-only" data-i18n="menu.people">Personas</span></button>
+      </div>
+      <span id="hudFps" class="hud-fps">FPS —</span>
+      <div id="hudTimer" class="hud-timer hidden">0.0</div>
+    </div>
+    <div id="hudPlayers" class="hud-players"></div>
+    <button id="boardShowBtn" class="board-show" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></button>
+    <div id="perfHud" class="hidden"></div>
+    <div id="fxBar"></div>
+    <div id="buildBar" class="hidden">
+      <button id="buildToggle" type="button" data-i18n="bd.build">Construir</button>
+      <div id="buildTools" class="hidden">
+        <button id="buildModeBtn" type="button">Colocar</button>
+        <div id="buildPal"></div>
+        <div id="buildCur"></div>
+        <span id="buildCount">0 / 4000</span>
+      </div>
+    </div>
+    <div id="centerDot" class="hidden"><span class="shift-ico"></span></div>
+    <div id="chatBox" class="hidden">
+      <div id="chatLog"></div>
+      <form id="chatForm"><input id="chatInput" type="text" maxlength="200" placeholder="Escribe y pulsa Enter" data-i18n-ph="hud.chatPh" autocomplete="off"><button id="chatSend" class="chat-send" type="submit" title="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></form>
+    </div>
+    <div id="touchUI" class="hidden">
+      <div id="stickZone"></div>
+      <div id="stick"><div id="stickKnob"></div></div>
+      <button id="jumpBtn" type="button" data-i18n="hud.jump">Saltar</button>
+      <button id="crouchBtn" class="touch-mini" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="M6.5 8.5 12 14l5.5-5.5"/><path d="M5 20h14"/></svg><span class="sr-only" data-i18n="hud.crouch">Agacharse</span></button>
+      <button id="shiftBtn" class="touch-mini" type="button"><span class="shift-ico"></span><span class="sr-only">Shift Lock</span></button>
+    </div>
+  </div>
+  <div id="pauseMenu" class="hidden">
+    <div class="pause-card menu-panel">
+      <aside class="menu-side">
+        <div class="side-head">
+          <span class="brand-bolt menu-bolt"></span>
+          <div class="side-title"><b id="pauseExpName">Experiencia</b><span id="pauseExpMeta">por @— • 0:00</span></div>
+        </div>
+        <nav class="menu-tabs side">
+          <button type="button" data-mtab="personas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="menu.people">Personas</span></button>
+          <button type="button" data-mtab="graficos" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span data-i18n="g.gfx">Gráficos</span></button>
+          <button type="button" data-mtab="sonido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.6 5.4a9 9 0 0 1 0 13.2"/></svg><span data-i18n="menu.sound">Sonido</span></button>
+          <button type="button" data-mtab="controles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><line x1="7" y1="10.5" x2="7" y2="14.5"/><line x1="5" y1="12.5" x2="9" y2="12.5"/><circle cx="16" cy="11" r="0.6" fill="currentColor"/><circle cx="18.5" cy="13.5" r="0.6" fill="currentColor"/></svg><span data-i18n="menu.controls">Controles</span></button>
+          <button type="button" data-mtab="galeria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span data-i18n="menu.gallery">Galería</span></button>
+          <button type="button" data-mtab="ayuda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span data-i18n="menu.help">Ayuda</span></button>
+        </nav>
+      </aside>
+      <div class="menu-main">
+        <div class="menu-pages">
+      <section data-mpage="personas" class="hidden">
+        <h3 class="set-group" data-i18n="g.gameplay">Juego</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.names">Nombres de las personas</span><button type="button" class="set-check" data-check="showNames" aria-label="Nombres de las personas"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.emblems">Mis emblemas</span><button type="button" class="set-check" data-check="showEmblems" aria-label="Mis emblemas"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.multi">Multijugador en línea</span><button type="button" class="set-check" data-check="multi" aria-label="Multijugador en línea"></button></div>
+        <div class="people-head"><h3 class="set-group" id="peopleCount">Personas: 1</h3><button id="inviteBtn" class="btn small" type="button"><span data-i18n="menu.invite">Invitar amigos</span></button></div>
+        <div id="menuPeople"></div>
+        <p class="pause-note" data-i18n="menu.peopleNote">Con el multijugador activado, quien entre a esta experiencia aparece en tu mundo y en esta lista.</p>
+      </section>
+      <section data-mpage="graficos">
+        <h3 class="set-group" data-i18n="g.quality">Calidad</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.gfxProfile">Perfil de calidad</span><div class="set-cycle"><button type="button" data-set="gfxProfile" data-dir="-1">‹</button><b id="val-gfxProfile">Equilibrio</b><button type="button" data-set="gfxProfile" data-dir="1">›</button></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.gfxMode">Modo de gráficos</span><div class="set-cycle"><button type="button" data-set="gfxMode" data-dir="-1">‹</button><b id="val-gfxMode">Manual</b><button type="button" data-set="gfxMode" data-dir="1">›</button></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.gfxQ">Calidad de gráficos</span><div class="set-slider"><input type="range" data-rng="gfxQ" min="1" max="10" step="1"><b class="rng-val" data-rngv="gfxQ"></b></div></div>
+        <h3 class="set-group" data-i18n="g.display">Pantalla</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.fs">Pantalla completa</span><button type="button" class="set-check" id="fsBtn" aria-label="Pantalla completa"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.fpsCap">Límite de FPS</span><div class="set-cycle"><button type="button" data-set="fpsCap" data-dir="-1">‹</button><b id="val-fpsCap">Sin límite</b><button type="button" data-set="fpsCap" data-dir="1">›</button></div></div>
+        <h3 class="set-group" data-i18n="g.ui">Interfaz</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.alpha">Transparencia del fondo</span><div class="set-slider"><input type="range" data-rng="menuAlpha" min="60" max="98" step="2"><b class="rng-val" data-rngv="menuAlpha"></b></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.textSize">Tamaño del texto</span><div class="set-slider"><input type="range" data-rng="textSize" min="0" max="5" step="1"><b class="rng-val" data-rngv="textSize"></b></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.reduceMotion">Reducir movimiento</span><button type="button" class="set-check" data-check="reduceMotion" aria-label="Reducir movimiento"></button></div>
+        <p class="pause-note" data-i18n="menu.setNote">Los ajustes se guardan en este navegador y se aplican al momento, también en la próxima experiencia.</p>
+      </section>
+      <section data-mpage="sonido" class="hidden">
+        <h3 class="set-group" data-i18n="s.volume">Volumen</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.master">Principal</span><div class="set-slider"><input type="range" data-rng="volume" min="0" max="100" step="5"><b class="rng-val" data-rngv="volume"></b></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.sfx">Efectos de sonido</span><div class="set-slider"><input type="range" data-rng="sfxVol" min="0" max="100" step="5"><b class="rng-val" data-rngv="sfxVol"></b></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.music">Música</span><div class="set-slider"><input type="range" data-rng="musicVol" min="0" max="100" step="5"><b class="rng-val" data-rngv="musicVol"></b></div></div>
+        <h3 class="set-group" data-i18n="g.behaviour">Comportamiento</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.muteBlur">Silenciar al perder el foco</span><button type="button" class="set-check" data-check="muteBlur" aria-label="Silenciar al perder el foco"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.haptics">Hápticas (vibración)</span><button type="button" class="set-check" data-check="haptics" aria-label="Hápticas (vibración)"></button></div>
+      </section>
+      <section data-mpage="controles" class="hidden">
+        <h3 class="set-group" data-i18n="g.cam">Cámara</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.sens">Sensibilidad de cámara</span><div class="set-slider"><input id="setSens" type="range" min="0.3" max="2.5" step="0.1" value="1"><b class="rng-val" id="rngv-sens">100%</b></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.camInv">Cámara invertida</span><button type="button" class="set-check" data-check="camInv" aria-label="Cámara invertida"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.shiftLock">Shift Lock</span><button type="button" class="set-check" data-check="shiftLock" aria-label="Shift Lock"></button></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.camMode">Modo de cámara</span><div class="set-cycle"><button type="button" data-set="camMode" data-dir="-1">‹</button><b id="val-camMode">Libre</b><button type="button" data-set="camMode" data-dir="1">›</button></div></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.fov">Campo de visión</span><div class="set-slider"><input type="range" data-rng="fov" min="45" max="100" step="1"><b class="rng-val" data-rngv="fov"></b></div></div>
+        <h3 class="set-group" data-i18n="g.move">Movimiento</h3>
+        <div class="set-row"><span class="set-label" data-i18n="s.moveMode">Modo de movimiento</span><div class="set-cycle"><button type="button" data-set="moveMode" data-dir="-1">‹</button><b id="val-moveMode">Joystick fijo</b><button type="button" data-set="moveMode" data-dir="1">›</button></div></div>
+        <h3 class="set-group" data-i18n="g.keybinds">Teclas</h3>
+        <div class="set-row"><span class="set-label" data-i18n="kb.forward">Avanzar</span><span class="key-chip">W</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.back">Retroceder</span><span class="key-chip">S</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.left">Izquierda</span><span class="key-chip">A</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.right">Derecha</span><span class="key-chip">D</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.jump">Saltar</span><span class="key-chip" data-i18n="kb.space">Espacio</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.chat">Chat</span><span class="key-chip">Enter</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.crouch">Agacharse</span><span class="key-chip">C</span></div>
+        <h3 class="set-group" data-i18n="g.reserved">Reservadas</h3>
+        <div class="set-row"><span class="set-label" data-i18n="kb.menu">Menú</span><span class="key-chip">Esc</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="s.fs">Pantalla completa</span><span class="key-chip">F11</span></div>
+        <div class="set-row"><span class="set-label" data-i18n="kb.perf">Panel de rendimiento</span><span class="key-chip">F3</span></div>
+      </section>
+      <section data-mpage="galeria" class="hidden">
+        <button id="captureBtn" class="btn primary" type="button" data-i18n="menu.shot">Capturar foto ahora</button>
+        <p class="pause-note" id="galleryNote" data-i18n="menu.galNote">Tus capturas de esta sesión aparecen aquí y se descargan como PNG.</p>
+        <div id="galleryGrid"></div>
+      </section>
+      <section data-mpage="ayuda" class="hidden">
+        <ul class="help-list">
+          <li><b data-i18n="help.move">Mover</b> — <span data-i18n="help.moveD">WASD, joystick táctil o stick del mando</span></li>
+          <li><b data-i18n="help.jump">Saltar</b> — <span data-i18n="help.jumpD">Espacio, botón Saltar o botón A del mando</span></li>
+          <li><b data-i18n="help.cam">Girar cámara</b> — <span data-i18n="help.camD">Arrastrar con el ratón o con el dedo</span></li>
+          <li><b data-i18n="help.zoom">Acercar o alejar</b> — <span data-i18n="help.zoomD">Rueda del ratón o pellizcar con dos dedos</span></li>
+          <li><b data-i18n="help.shift">Shift Lock</b> — <span data-i18n="help.shiftD">Tecla Shift o botón Shift Lock en móvil</span></li>
+          <li><b data-i18n="help.crouch">Agacharse</b> — <span data-i18n="help.crouchD">Tecla C, Ctrl mantenido o botón B del mando</span></li>
+          <li><b data-i18n="help.climb">Escalar</b> — <span data-i18n="help.climbD">Empuja hacia un truss gris y usa W/S para subir y bajar, A/D para deslizarte</span></li>
+          <li><b data-i18n="help.swim">Nadar</b> — <span data-i18n="help.swimD">En la piscina de la Plaza: muévete igual y mantén Espacio para subir a la superficie</span></li>
+          <li><b data-i18n="help.sit">Sentarse</b> — <span data-i18n="help.sitD">Quédate quieto unos instantes sobre un banco de la Plaza</span></li>
+          <li><b data-i18n="help.chat">Chat</b> — <span data-i18n="help.chatD">Botón Chat o tecla Enter</span></li>
+        </ul>
+        <p class="pause-note"><span data-i18n="help.verA">Cliente VORTX web · Experiencia:</span> <span id="verExp">—</span> · <span data-i18n="help.verB">Núcleo de física:</span> <span id="verCore">…</span> · Three.js (MIT) · <span data-i18n="help.verC">Multijugador en línea por salas.</span></p>
+      </section>
+        </div>
+        <div class="menu-foot">
+          <button id="exitBtn" class="foot-btn danger" type="button"><span class="key-chip">Q</span><span data-i18n="menu.exit">Salir</span></button>
+          <button id="respawnBtn" class="foot-btn" type="button"><span class="key-chip">R</span><span data-i18n="menu.respawn">Regenerar</span></button>
+          <button id="resumeBtn" class="foot-btn primary" type="button"><span class="key-chip light">Esc</span><span data-i18n="menu.resume">Reanudar</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="winBanner" class="hidden">
+    <div class="pause-card">
+      <h2 data-i18n="win.title">Meta alcanzada</h2>
+      <p class="win-line"><span data-i18n="win.time">Tu tiempo:</span> <b id="winTime">0.0</b></p>
+      <p class="pause-note" id="winBest"></p>
+      <button id="winContinue" class="btn primary big" type="button" data-i18n="win.continue">Seguir explorando</button>
+      <button id="winExit" class="btn big" type="button" data-i18n="win.exit">Salir de la experiencia</button>
+    </div>
+  </div>
+</div>
+
+<div id="quickNav" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="qnClose" type="button">×</button>
+    <h3 style="margin:0 0 10px" data-i18n="qn.title">Navegación rápida</h3>
+    <input id="qnInput" type="text" placeholder="Escribe para buscar un destino…" autocomplete="off" data-i18n-ph="qn.ph">
+    <div id="qnList" class="qn-list"></div>
+    <p class="form-note" data-i18n="qn.note">Consejo: pulsa Ctrl+K desde cualquier página para abrir esto.</p>
+  </div>
+</div>
+
+
+
+<div id="msgDock" class="hidden"></div>
+<div id="popMenu" class="hidden"></div>
+
+<div id="friendModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="afClose" type="button">×</button>
+    <h3 style="margin:0 0 6px" data-i18n="af.title">Añadir amigo</h3>
+    <p class="form-note" style="margin-bottom:12px" data-i18n="af.sub">Escribe el nombre de usuario exacto de la persona que quieres añadir.</p>
+    <form id="afForm" class="form-grid">
+      <label><span data-i18n="auth.user">Usuario</span> <input id="afUser" type="text" autocomplete="off" maxlength="16"></label>
+      <p class="form-err" id="afErr"></p>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button class="btn" id="afCancel" type="button" data-i18n="af.cancel">Cancelar</button>
+        <button class="btn primary" type="submit" data-i18n="af.send">Enviar solicitud</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="reportModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="repClose" type="button">×</button>
+    <h3 style="margin:0 0 12px" id="repTitle">Reportar</h3>
+    <form id="repForm" class="form-grid">
+      <label><span data-i18n="exp3.repReason">Motivo</span>
+        <select id="repReason">
+          <option value="spam" data-i18n="exp3.reasonSpam">Spam o publicidad</option>
+          <option value="abuso" data-i18n="exp3.reasonAbuse">Acoso o abuso</option>
+          <option value="contenido" data-i18n="exp3.reasonContent">Contenido inapropiado</option>
+          <option value="estafa" data-i18n="exp3.reasonScam">Estafa</option>
+          <option value="otro" data-i18n="exp3.reasonOther">Otro</option>
+        </select></label>
+      <label><textarea id="repText" rows="3" maxlength="300"></textarea></label>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button class="btn" id="repCancel" type="button" data-i18n="af.cancel">Cancelar</button>
+        <button class="btn primary" type="submit" data-i18n="exp3.repSend">Enviar reporte</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="codeModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="cmClose" type="button">×</button>
+    <h3 style="margin:0 0 12px" id="cmTitle">Servidor privado</h3>
+    <div id="cmBody"></div>
+  </div>
+</div>
+
+<div id="editProfileModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="edpClose" type="button">×</button>
+    <h3 style="margin:0 0 6px" data-i18n="edp.title">Editar perfil</h3>
+    <p class="form-note" style="margin-bottom:12px" data-i18n="edp.free">Toda la personalización es gratuita para todos.</p>
+    <form id="edpForm" class="form-grid">
+      <label><span data-i18n="edp.bio">Bio</span> <textarea id="edpBio" rows="3" maxlength="120"></textarea></label>
+      <label><span data-i18n="edp.banner">Color del banner</span><span class="bg-swatches" id="edpBannerRow"></span></label>
+      <div class="edp-media">
+        <span data-i18n="edp.bannerMedia">Foto o video del banner</span>
+        <div id="edpMediaPrev" class="edp-media-prev"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <label class="btn small" style="margin:0"><span data-i18n="edp.upPhoto">Subir foto</span><input id="edpImgFile" type="file" accept="image/*" hidden></label>
+          <label class="btn small" style="margin:0"><span data-i18n="edp.upVideo">Subir video</span><input id="edpVidFile" type="file" accept="video/mp4,video/webm" hidden></label>
+          <button class="btn small" id="edpMediaRemove" type="button" data-i18n="edp.removeMedia">Quitar</button>
+        </div>
+        <p class="form-note" data-i18n="edp.mediaNote">La foto se reduce a 1280 px. El video (MP4 o WebM) puede pesar hasta 6 MB.</p>
+        <p class="form-err" id="edpMediaErr"></p>
+      </div>
+      <label><span data-i18n="edp.accent">Color de acento</span><span class="bg-swatches" id="edpAccentRow"></span></label>
+      <label><span data-i18n="edp.cardBg">Fondo de la tarjeta del avatar</span><span class="bg-swatches" id="edpBgRow"></span></label>
+      <button class="btn primary" type="submit" data-i18n="edp.save">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+
+<div id="logoutModal" class="modal hidden">
+  <div class="modal-card">
+    <h3 style="margin:0 0 8px" data-i18n="lo.title">¿Seguro que quieres cerrar sesión?</h3>
+    <p class="form-note" style="margin-bottom:16px" data-i18n="lo.text">Tu cuenta y tus datos se quedan guardados en este navegador.</p>
+    <div style="display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn" id="loCancel" type="button" data-i18n="lo.cancel">Cancelar</button>
+      <button class="btn primary" id="loConfirm" type="button" data-i18n="lo.confirm">Cerrar sesión</button>
+    </div>
+  </div>
+</div>
+
+<div id="toasts"></div>
+
+<script>
+(function () {
+  var scr = document.getElementById('bootScreen');
+  var fill = document.getElementById('bootFill');
+  var pct = document.getElementById('bootPct');
+  var shownAt = Date.now(), cur = 0, done = false;
+  function set(p) {
+    p = Math.max(cur, Math.min(100, p)); cur = p;
+    if (fill) fill.style.width = p + '%';
+    if (pct) pct.textContent = Math.round(p) + '%';
+  }
+  function hide() {
+    if (done || !scr) return; done = true;
+    var wait = Math.max(0, 650 - (Date.now() - shownAt));
+    setTimeout(function () {
+      set(100);
+      scr.classList.add('done');
+      setTimeout(function () { if (scr.parentNode) scr.parentNode.removeChild(scr); }, 480);
+    }, wait);
+  }
+  window.__bootSet = set;
+  window.__bootDone = hide;
+  setTimeout(hide, 7000);
+  set(12);
+})();
+</script>
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.js" } }</script>
+<script src="vendor/fengari-web.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
